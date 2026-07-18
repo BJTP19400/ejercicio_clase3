@@ -12,4 +12,10 @@ print("Datos cargados exitosamente.")
 return df
 except Exception as e:
 print(f"Error al cargar el archivo: {e}")
+
 return None
+
+def sales_funnel_analysis(df):
+"""Analiza la pérdida de usuarios entre las páginas 1 y 5 de la tienda."""
+return df['PAGE'].value_counts().sort_index()
+
